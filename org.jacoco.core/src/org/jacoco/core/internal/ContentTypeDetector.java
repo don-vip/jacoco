@@ -43,6 +43,8 @@ public class ContentTypeDetector {
 
 	private final int type;
 
+	private static final int V11 = 0 << 16 | 55;
+
 	/**
 	 * Creates a new detector based on the given input. To process the complete
 	 * original input afterwards use the stream returned by
@@ -83,6 +85,8 @@ public class ContentTypeDetector {
 			case Opcodes.V1_7:
 			case Opcodes.V1_8:
 			case Opcodes.V9:
+			case Opcodes.V10:
+			case V11:
 				return CLASSFILE;
 			}
 		}
